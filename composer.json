@@ -1,0 +1,14 @@
+{
+    "name": "infostars/mpcmf-exampleApp",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitriy Emelyanov",
+            "email": "gilberg.vrn@gmail.com"
+        }
+    ],
+    "require": {
+        "infostars/mpcmf-core": "dev-master"
+    }
+}
