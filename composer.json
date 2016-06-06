@@ -9,6 +9,13 @@
         }
     ],
     "require": {
-        "infostars/mpcmf-core": "dev-master"
+        "mpcmf/mpcmf-core": "dev-master",
+        "mpcmf/mpcmf-web": "dev-master",
+        "mpcmf/mpcmf-console": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "mpcmf\\apps\\": "apps/"
+        }
     }
 }
