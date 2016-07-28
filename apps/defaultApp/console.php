@@ -1,6 +1,6 @@
 <?php
 
-namespace mpcmf\apps\exampleApp;
+namespace mpcmf\apps\defaultApp;
 
 use mpcmf\system\application\consoleBase;
 

@@ -1,21 +1,24 @@
 {
-    "name": "infostars/mpcmf-exampleApp",
+    "name": "mpcmf/mpcmf-app",
     "minimum-stability": "dev",
     "license": "MIT",
     "authors": [
         {
             "name": "Dmitriy Emelyanov",
             "email": "gilberg.vrn@gmail.com"
+        },
+        {
+            "name": "Gregory Ostrovsky",
+            "email": "greevex@gmail.com"
         }
     ],
     "require": {
         "mpcmf/mpcmf-core": "dev-master",
-        "mpcmf/mpcmf-web": "dev-master",
         "mpcmf/mpcmf-console": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "mpcmf\\apps\\": "apps/"
+            "mpcmf\\apps\\": "src/apps/"
         }
     }
 }

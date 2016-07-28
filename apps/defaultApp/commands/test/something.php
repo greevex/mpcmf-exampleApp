@@ -1,18 +1,19 @@
 <?php
 
-namespace mpcmf\apps\exampleApp\commands;
+namespace mpcmf\apps\defaultApp\commands\test;
 
+use mpcmf\apps\defaultApp\libraries\exampleLib;
 use mpcmf\system\application\consoleCommandBase;
-use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
- * Example app
+ * Test sds app command
  *
- * @author Dmitry Emelyanov <gilberg.vrn@gmail.com>
+ * @author Gregory Ostrovsky <greevex@gmail.com>
  */
-class example
+class something
     extends consoleCommandBase
 {
 
@@ -23,7 +24,7 @@ class example
      */
     protected function defineArguments()
     {
-        $this->addArgument('query', InputArgument::OPTIONAL, 'Some query, used for example');
+        $this->addOption('some-option', null, InputOption::VALUE_REQUIRED, 'Passed text would be returned by app');
     }
 
     /**
@@ -45,15 +46,12 @@ class example
      */
     protected function handle(InputInterface $input, OutputInterface $output)
     {
-        $output->writeln('<comment>This is example command</comment>');
+        $output->writeln('It works!');
 
-        $query = $input->getArgument('query');
-
-        if ($query !== null) {
-            $output->writeln('<info>Your input:</info>');
-            $output->writeln($query);
-        } else {
-            $output->writeln('<info>Try to add argument for command call</info>');
+        $text = $input->getOption('some-option');
+        if($text) {
+            $somethingLib = new exampleLib($text);
+            $somethingLib->writeSomethingToErrorLog();
         }
     }
 }
