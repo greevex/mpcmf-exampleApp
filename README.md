@@ -8,12 +8,12 @@ Installation
 ---
 install base application structure
 ```
-composer install-app mpcmf/mpcmf-app
+composer.phar create-project mpcmf/mpcmf-app .
 ```
 
 then install tested requirements
 ```
-./composer.phar install
+composer.phar install
 ```
 
 Usage
